@@ -1,126 +1,67 @@
-# Logs
+# -------------------------
+# OS / editor
+# -------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# -------------------------
+# Logs and runtime files
+# -------------------------
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-
-# Diagnostic reports
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-
-# Runtime data
 pids
 *.pid
-*.seed
 *.pid.lock
 
-# Coverage and test output
-lib-cov
-coverage
+# -------------------------
+# Test / coverage
+# -------------------------
+coverage/
 *.lcov
-.nyc_output
+.nyc_output/
 
-# Build / intermediate files
-.grunt
-build/Release
-dist/
-out
-.output
-.cache
-.parcel-cache
-.vite/
-.vitepress/dist
-**/.vitepress/dist
-.temp
-.fusebox/
-.serverless/
-.docusaurus
-.web_modules/
-jspm_packages/
-
-# Dependency directories
-node_modules/
-bower_components
-.pnpm-store
-
-# Yarn v3
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-.yarn-integrity
-
-# Optional npm cache
-.npm
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Optional eslint/stylelint cache
-.eslintcache
-.stylelintcache
-
-# REPL history
-.node_repl_history
-
-# npm pack output
-*.tgz
-
-# DynamoDB Local files
-.dynamodb/
-
-# Firebase cache
-.firebase/
-
-# TernJS port file
-.tern-port
-
-# VSCode test store
-.vscode-test
-
-# Snowpack / Vite / Svelte / Next / Nuxt / Gatsby / Vuepress / SvelteKit
-.next
-.nuxt
-.cache
+# -------------------------
+# Build caches (local dev)
+# -------------------------
 .cache/
-.svelte-kit/
-.vuepress/dist
+.parcel-cache/
+.temp/
 
-# Static site output (Pages)
-# Keep public/ ignored for build artifacts, but include if you intentionally commit built files.
-public/
-# If you commit built output for Pages, remove or comment the above line.
-
-# OS / editor
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-
+# -------------------------
 # Secrets and environment
+# -------------------------
 .env
 .env.*
 !.env.example
 *.pem
 *.key
 
-# Fonts / assets (if you generate or build them, ignore build artifacts)
-# (No generic rule here; keep fonts tracked if they are source assets.)
-
-# Misc
-*.seed
+# -------------------------
+# Misc / safety
+# -------------------------
+.node_repl_history
+*.tgz
 .lock-wscript
+*.seed
 
-# Timestamped config artifacts
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
+# -------------------------
+# Fonts / large binaries
+# If you want to exclude large source font files (TTF/OTF) from public,
+# add a rule here. Currently we keep web fonts (WOFF2) tracked in public/.
+# Example (commented):
+# assets/fonts/**/*.ttf
+# assets/fonts/**/*.otf
 
-# Ensure build artifacts from static site generators are ignored
-# (Uncomment specific lines if you use a framework and want to track public/)
-# public
+# -------------------------
+# Static site output
+# We intentionally track public/ in this repo, so do NOT ignore it.
+# If you later switch to building in CI and not committing public/, uncomment:
+# public/
 
 # End of file
