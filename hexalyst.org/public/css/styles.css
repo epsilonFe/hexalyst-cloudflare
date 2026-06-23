@@ -1,0 +1,225 @@
+/* styles.css — Instrument Sans self-hosted (WOFF2-first) */
+
+/* --------------------------------------------------
+   Font face (WOFF2 preferred)
+-------------------------------------------------- */
+@font-face {
+  font-family: 'InstrumentSansLocal';
+  src: url('/assets/fonts/InstrumentSans/InstrumentSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'InstrumentSansLocal';
+  src: url('/assets/fonts/InstrumentSans/InstrumentSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --------------------------------------------------
+   Base Reset
+-------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------
+   Base typography and body
+-------------------------------------------------- */
+html,
+body {
+  background: #0d0f12;
+  color: #e5e7eb;
+  font-family: 'InstrumentSansLocal', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  background: #111418;
+  padding: 0.5rem;
+  z-index: 9999;
+  border-radius: 6px;
+}
+
+/* --------------------------------------------------
+   Layout
+-------------------------------------------------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #1f242d;
+  background: #0d0f12;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  gap: 22px;
+}
+
+.site-nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color .2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #4cc9f0;
+  outline: none;
+}
+
+/* Sections */
+.section {
+  padding: 80px 40px;
+}
+
+.section-alt {
+  background: #111418;
+}
+
+.section-header {
+  max-width: 720px;
+}
+
+.section-header h2 {
+  font-size: 1.75rem;
+  margin-bottom: 12px;
+  color: #4cc9f0;
+}
+
+.section-header p {
+  color: #a1a5ad;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.btn.primary {
+  background: #4cc9f0;
+  color: #0d0f12;
+}
+
+.btn.primary:hover,
+.btn.primary:focus {
+  opacity: 0.9;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  color: #4cc9f0;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Contact and footer */
+.contact-meta p {
+  margin-bottom: 8px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #1f242d;
+  background: #0d0f12;
+  color: #6b7280;
+}
+
+.site-footer a {
+  color: #4cc9f0;
+  text-decoration: none;
+}
+
+/* Accessibility */
+a:focus-visible {
+  outline: 2px solid #4cc9f0;
+  outline-offset: 3px;
+}
+
+a:focus {
+  outline: 2px solid #4cc9f0;
+  outline-offset: 3px;
+}
+
+/* Spacing fix */
+.section p:last-of-type {
+  margin-bottom: 25px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .site-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .section {
+    padding: 60px 25px;
+  }
+}
