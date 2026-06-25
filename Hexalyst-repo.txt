@@ -1,0 +1,20 @@
+Hexalyst-repo
+Edition 06/22/2026
+
+hexalyst@hexafe:/mnt/c/home/hexalyst/hexalyst-repo$ tree
+/mnt/c/home/hexalyst/hexalyst-repo/
+├── Hexalyst-repo.txt
+├── README.md
+├── hexalyst.com
+│   ├── assets
+│   ├── css
+│   └── public
+├── hexalyst.org
+│   └── public
+
+
+Separated sites
+Folder responsibilities
+hexalyst.com / hexalyst.org
+public — static assets (built CSS/images).
+assets — source assets (images, fonts).
